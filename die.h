@@ -18,8 +18,17 @@ private:
     int startingValue;
 
 public:
-    Die(int startingNumberofSides, int startingIncrement = 1, int startingStaringValue = 1,
+    Die(int startingNumberOfSides, int startingIncrement = 1, int startingStaringValue = 1,
     std::string color = "White", bool isSymbols = false , std::string material = "Bone");
+    int roll();
+    void setNumberOfSides (int newNumberOfSides);
+    int getNumberOfSides();
+    void setIncrement (int newIncrement);
+    int getIncrement();
+    void setValue (int newValue);
+    int getValue();
+    void setColor (int newColor);
+    int getColor();
 };
 
 #endif //CRAPS_DIE_H
