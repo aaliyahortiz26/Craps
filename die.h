@@ -25,10 +25,16 @@ public:
     int getNumberOfSides();
     void setIncrement (int newIncrement);
     int getIncrement();
+    void getStartingValue(int newStartingValue);
+    int getStartingValue();
     void setValue (int newValue);
     int getValue();
-    void setColor (int newColor);
-    int getColor();
+    void setColor (std::string newColor);
+    std::string getColor();
+    void setColor(bool newIsSymbol);
+    bool isSymbol();
+    void setMaterial(std::string newMaterial;
+    std::string getMaterial();
 };
 
 #endif //CRAPS_DIE_H
