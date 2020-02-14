@@ -10,13 +10,14 @@ private:
     int numberOfSides;
     int increment;
     int value;
-    string color;
+    std::string color;
     bool isSymbols;
-    string material;
+    std::string material;
     int startingValue;
 
 public:
-    Die(int startingNumberofSides, int startingIncrement, int startingStaringValue);
+    Die(int startingNumberofSides, int startingIncrement, int startingStaringValue,
+    std::string color, bool isSymbols = false , std::string material = "Bone");
 };
 
 #endif //CRAPS_DIE_H
