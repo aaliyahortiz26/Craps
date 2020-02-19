@@ -19,25 +19,25 @@ int Die :: getNumberOfSides(){
 
 }
 void Die :: setIncrement (int newIncrement){
-
+    increment = newIncrement;
 }
 int Die :: getIncrement(){
 
 }
-void Die :: getStartingValue(int newStartingValue){
-
+void Die :: setStartingValue(int newStartingValue){
+    startingValue = newStartingValue;
 }
 int Die :: getStartingValue(){
 
 }
 void Die :: setValue (int newValue){
-
+    value = newValue;
 }
 int Die :: getValue(){
 
 }
 void Die :: setColor (std::string newColor){
-
+    color = newColor;
 }
 std::string Die :: getColor(){
 
@@ -49,7 +49,7 @@ bool Die :: isSymbol(){
 
 }
 void Die :: setMaterial(std::string newMaterial){
-
+    material = newMaterial;
 }
 std::string Die :: getMaterial(){
 

@@ -25,7 +25,7 @@ public:
     int getNumberOfSides();
     void setIncrement (int newIncrement);
     int getIncrement();
-    void getStartingValue(int newStartingValue);
+    void setStartingValue(int newStartingValue);
     int getStartingValue();
     void setValue (int newValue);
     int getValue();
