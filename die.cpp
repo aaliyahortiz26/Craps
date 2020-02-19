@@ -10,7 +10,7 @@ Die(int startingNumberOfSides, int startingIncrement = 1, int startingStaringVal
 
 }
 int Die :: roll(){
-    value = 2;
+    value = random() % numberOfSides;
 }
 void Die :: setNumberOfSides (int newNumberOfSides){
     numberOfSides = newNumberOfSides;
