@@ -6,7 +6,7 @@
 #include <random>
 
 Die(int startingNumberOfSides, int startingIncrement = 1, int startingStaringValue = 1,
-    std::string color = "White", bool isSymbols = false , std::string material = "Bone"){
+        std::string color = "White", bool isSymbols = false , std::string material = "Bone"){
 
 }
 int Die :: roll(){
