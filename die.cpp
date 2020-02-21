@@ -28,12 +28,15 @@ void Die :: setIncrement (int newIncrement){
 int Die :: getIncrement(){
     return increment;
 }
+
+//there is a lot of value parts
 void Die :: setStartingValue(int newStartingValue){
     startingValue = newStartingValue;
 }
 int Die :: getStartingValue(){
     return startingValue;
 }
+//figure what these two values are meant to be for
 void Die :: setValue (int newValue){
     value = newValue;
 }
@@ -48,10 +51,10 @@ std::string Die :: getColor(){
 }
 /*void Die :: setColor(bool newIsSymbol){
     //need to add a value here
-}*/
+}
 bool Die :: isSymbol(){
     //need to add a value here
-}
+}*/
 void Die :: setMaterial(std::string newMaterial){
     material = newMaterial;
 }
