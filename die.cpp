@@ -3,10 +3,10 @@
 //
 
 #include "die.h"
-#include <random>
+#include <stdlib.h>
 
-Die :: Die(int startingNumberOfSides, int startingIncrement = 1, int startingStartingValue = 1,
-        std::string startingColor = "White", bool isSymbols = false , std::string startingMaterial = "Bone"){
+Die :: Die(int startingNumberOfSides, int startingIncrement , int startingStartingValue ,
+        std::string startingColor, bool isSymbols = false, std::string startingMaterial = "Bone"){
     numberOfSides = startingNumberOfSides;
     increment = startingIncrement;
     value = startingStartingValue;
@@ -14,7 +14,7 @@ Die :: Die(int startingNumberOfSides, int startingIncrement = 1, int startingSta
     material = startingMaterial;
 }
 int Die :: roll(){
-    value = random() % numberOfSides;
+    value = rand() % numberOfSides;
 }
 void Die :: setNumberOfSides (int newNumberOfSides){
     numberOfSides = newNumberOfSides;
