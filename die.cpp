@@ -5,9 +5,14 @@
 #include "die.h"
 #include <random>
 
-Die(int startingNumberOfSides, int startingIncrement = 1, int startingStaringValue = 1,
-        std::string color = "White", bool isSymbols = false , std::string material = "Bone"){
-
+Die :: Die(int startingNumberOfSides, int startingIncrement = 1, int startingStartingValue = 1,
+        std::string startingColor = "White", bool isSymbols = false , std::string startingMaterial = "Bone"){
+    numberOfSides = startingNumberOfSides;
+    increment = startingIncrement;
+    value = startingStartingValue;
+    color = startingColor;
+    material = startingMaterial;
+    //isSymbols
 }
 int Die :: roll(){
     value = random() % numberOfSides;
@@ -43,10 +48,10 @@ std::string Die :: getColor(){
     return color;
 }
 void Die :: setColor(bool newIsSymbol){
-
+    //need to add a value here
 }
 bool Die :: isSymbol(){
-
+    //need to add a value here
 }
 void Die :: setMaterial(std::string newMaterial){
     material = newMaterial;

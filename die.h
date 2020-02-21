@@ -19,7 +19,7 @@ private:
 
 public:
     Die(int startingNumberOfSides, int startingIncrement = 1, int startingStaringValue = 1,
-    std::string color = "White", bool isSymbols = false , std::string material = "Bone");
+    std::string color = "White", bool isSymbols = false , std::string startingMaterial = "Bone");
     int roll();
     void setNumberOfSides (int newNumberOfSides);
     int getNumberOfSides();
