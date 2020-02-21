@@ -46,9 +46,9 @@ void Die :: setColor (std::string newColor){
 std::string Die :: getColor(){
     return color;
 }
-void Die :: setColor(bool newIsSymbol){
+/*void Die :: setColor(bool newIsSymbol){
     //need to add a value here
-}
+}*/
 bool Die :: isSymbol(){
     //need to add a value here
 }

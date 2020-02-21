@@ -31,8 +31,8 @@ public:
     int getValue();
     void setColor (std::string newColor);
     std::string getColor();
-    void setColor(bool newIsSymbol);
-    bool isSymbol();
+    //void setColor(bool newIsSymbol);
+    //bool isSymbol();
     void setMaterial(std::string newMaterial);
     std::string getMaterial();
 };

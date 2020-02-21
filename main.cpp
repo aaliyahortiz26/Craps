@@ -8,9 +8,19 @@ int main() {
     std::cout << "Increment: " << rollingThing.getIncrement() << std::endl;
     std::cout << "Starting Value: " << rollingThing.getValue() << std::endl;
     std::cout << "Color: " << rollingThing.getColor() << std::endl;
-    std::cout << "Die Material: " << rollingThing.getMaterial() << std::endl;
+    std::cout << "Die Material: " << rollingThing.getMaterial() << "\n" << std::endl;
 
-    std::cout << "Rolled a: " << rollingThing.roll() << std::endl;
+    std::cout << "Roll: " << rollingThing.roll() << "\n" << std::endl; //this comes out to too high of a number
+
+    rollingThing.setNumberOfSides(12);
+    rollingThing.setColor("Green");
+    rollingThing.setStartingValue(4);
+    rollingThing.setIncrement(3);
+    rollingThing.setMaterial("Plastic");
+
+    std::cout << "New Starting Value: " << rollingThing.getStartingValue() << std::endl;
+    std::cout << "Number of sides: " << rollingThing.getNumberOfSides() << std::endl;
+    std::cout << "Color: " << rollingThing.getColor() << std::endl;
 
     return 0;
 }
