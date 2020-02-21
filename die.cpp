@@ -12,7 +12,6 @@ Die :: Die(int startingNumberOfSides, int startingIncrement = 1, int startingSta
     value = startingStartingValue;
     color = startingColor;
     material = startingMaterial;
-    //isSymbols
 }
 int Die :: roll(){
     value = random() % numberOfSides;
