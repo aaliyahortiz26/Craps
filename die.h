@@ -18,8 +18,8 @@ private:
     int startingValue;
 
 public:
-    Die(int startingNumberOfSides, int startingIncrement = 1, int startingStaringValue = 1,
-    std::string color = "White", bool isNewSymbols = false , std::string startingMaterial = "Bone");
+    Die(int startingNumberOfSides, int startingIncrement, int startingStaringValue,
+    std::string color, bool isSymbols , std::string startingMaterial);
     int roll();
     void setNumberOfSides (int newNumberOfSides);
     int getNumberOfSides();
@@ -33,7 +33,7 @@ public:
     std::string getColor();
     void setColor(bool newIsSymbol);
     bool isSymbol();
-    void setMaterial(std::string newMaterial;
+    void setMaterial(std::string newMaterial);
     std::string getMaterial();
 };
 
