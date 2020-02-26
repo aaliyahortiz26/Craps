@@ -10,7 +10,7 @@ int main() {
     std::cout << "Color: " << rollingThing.getColor() << std::endl;
     std::cout << "Die Material: " << rollingThing.getMaterial() << "\n" << std::endl;
 
-    std::cout << "Roll: " << rollingThing.roll() << "\n" << std::endl; //this comes out too high of a number
+    rollingThing.roll();
 
     rollingThing.setNumberOfSides(12);
     rollingThing.setColor("Green");
@@ -26,7 +26,7 @@ int main() {
     std::cout << "Color: " << rollingThing.getColor() << std::endl;
     std::cout << "Material: " << rollingThing.getMaterial() << "\n" << std::endl;
 
-    std::cout << "Roll: " << rollingThing.roll() << std::endl;
+    rollingThing.roll();
 
     return 0;
 }
