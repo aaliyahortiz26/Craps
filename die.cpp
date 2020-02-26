@@ -15,7 +15,8 @@ Die :: Die(int startingNumberOfSides, int startingIncrement , int startingStarti
     srand((unsigned int) time(NULL));
 }
 int Die :: roll(){
-    value = ((rand() % numberOfSides) * increment + startingValue);
+    value = (rand() % numberOfSides); 
+    return value;
 }
 void Die :: setNumberOfSides (int newNumberOfSides){
     numberOfSides = newNumberOfSides;

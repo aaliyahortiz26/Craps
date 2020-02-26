@@ -2,7 +2,7 @@
 #include "die.h"
 
 int main() {
-    Die rollingThing(6, 1, 1, "White" , false, "Bone");
+    Die rollingThing(6, 4, 6, "White" , false, "Bone");
 
     std::cout << "Number of sides: " << rollingThing.getNumberOfSides() << std::endl;
     std::cout << "Increment: " << rollingThing.getIncrement() << std::endl;
@@ -10,7 +10,7 @@ int main() {
     std::cout << "Color: " << rollingThing.getColor() << std::endl;
     std::cout << "Die Material: " << rollingThing.getMaterial() << "\n" << std::endl;
 
-    rollingThing.roll();
+    std::cout << "Roll: " << rollingThing.roll() << std::endl;
 
     rollingThing.setNumberOfSides(12);
     rollingThing.setColor("Green");
