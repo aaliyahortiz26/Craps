@@ -12,9 +12,10 @@ Die :: Die(int startingNumberOfSides, int startingIncrement , int startingStarti
     value = startingStartingValue;
     color = startingColor;
     material = startingMaterial;
+    srand((unsigned int) time(NULL));
 }
 int Die :: roll(){
-    value = rand() % numberOfSides;
+    value = ((rand() % numberOfSides) * increment + startingValue);
 }
 void Die :: setNumberOfSides (int newNumberOfSides){
     numberOfSides = newNumberOfSides;
