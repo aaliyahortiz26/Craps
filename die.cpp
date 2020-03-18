@@ -15,7 +15,7 @@ Die :: Die(int startingNumberOfSides, int startingIncrement , int startingStarti
     srand((unsigned int) time(NULL));
 }
 int Die :: roll(){
-    value = (rand() % numberOfSides); 
+    value = ((rand() % numberOfSides) * increment + startingValue);
     return value;
 }
 void Die :: setNumberOfSides (int newNumberOfSides){
@@ -25,22 +25,27 @@ int Die :: getNumberOfSides(){
     return numberOfSides;
 }
 void Die :: setIncrement (int newIncrement){
-    increment = newIncrement;
+    if (newIncrement > 0 && newIncrement == 1) //increment must be at least 1
+        increment = newIncrement;
+    else
+        increment = newIncrement;
+        startingValue = newIncrement;
 }
 int Die :: getIncrement(){
     return increment;
 }
 
-//there is a lot of value parts
 void Die :: setStartingValue(int newStartingValue){
     startingValue = newStartingValue;
 }
 int Die :: getStartingValue(){
     return startingValue;
 }
-//figure what these two values are meant to be for
 void Die :: setValue (int newValue){
-    value = newValue;
+    if (startingValue * increment <= newValue <= numberOfSides * increment and not newValue % increment)
+        value = newValue;
+    else
+        throw BadDieValueException();
 }
 int Die :: getValue(){
     return value;
@@ -51,12 +56,6 @@ void Die :: setColor (std::string newColor){
 std::string Die :: getColor(){
     return color;
 }
-/*void Die :: setColor(bool newIsSymbol){
-    //need to add a value here
-}
-bool Die :: isSymbol(){
-    //need to add a value here
-}*/
 void Die :: setMaterial(std::string newMaterial){
     material = newMaterial;
 }

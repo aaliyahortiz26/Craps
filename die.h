@@ -12,14 +12,14 @@ private:
     int numberOfSides;
     int increment;
     int value;
-    std::string color;
-    bool isSymbols;
-    std::string material;
     int startingValue;
+    std::string color;
+    std::string material;
 
 public:
     Die(int startingNumberOfSides, int startingIncrement, int startingStaringValue,
     std::string color, bool isSymbols , std::string startingMaterial);
+    std::string stringRep();
     int roll();
     void setNumberOfSides (int newNumberOfSides);
     int getNumberOfSides();
@@ -31,10 +31,14 @@ public:
     int getValue();
     void setColor (std::string newColor);
     std::string getColor();
-    //void setColor(bool newIsSymbol);
-    bool isSymbol();
     void setMaterial(std::string newMaterial);
     std::string getMaterial();
+};
+
+struct BadDieValueException : public std::exception{
+    const char * what() const throw(){
+        return "Can't set die value; value out of range.";
+    }
 };
 
 #endif //CRAPS_DIE_H
