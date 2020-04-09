@@ -14,6 +14,8 @@ Die :: Die(int startingNumberOfSides, int startingIncrement , int startingStarti
     material = startingMaterial;
     srand((unsigned int) time(NULL));
 }
+Die :: Die() {}
+
 int Die :: roll(){
     value = ((rand() % numberOfSides) * increment + startingValue);
     return value;

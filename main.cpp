@@ -1,32 +1,72 @@
 #include <iostream>
 #include "die.h"
 
+void playGame(int currentBank, int currentBet);
+void playFirstRoll(int rollValue);
+void playSecondRoll(int rollValue);
+void displayResults(int currentBank, int currentBet);
+
 int main() {
-    Die rollingThing(6, 4, 6, "White" , false, "Bone");
+    float currentBank = 1000.0;
+    float currentBet = 10.0;
 
-    std::cout << "Number of sides: " << rollingThing.getNumberOfSides() << std::endl;
-    std::cout << "Increment: " << rollingThing.getIncrement() << std::endl;
-    std::cout << "Starting Value: " << rollingThing.getValue() << std::endl;
-    std::cout << "Color: " << rollingThing.getColor() << std::endl;
-    std::cout << "Die Material: " << rollingThing.getMaterial() << "\n" << std::endl;
-
-    std::cout << "Roll: " << rollingThing.roll() << std::endl;
-
-    rollingThing.setNumberOfSides(12);
-    rollingThing.setColor("Green");
-    rollingThing.setStartingValue(4);
-    rollingThing.setIncrement(3);
-    rollingThing.setMaterial("Plastic");
-    rollingThing.setValue(2); //what is this value meant for
-
-    std::cout << "New Round!!" << std::endl;
-    std::cout << "Number of sides: " << rollingThing.getNumberOfSides() << std::endl;
-    std::cout << "Increment: " << rollingThing.getIncrement() << std::endl;
-    std::cout << "Starting Value: " << rollingThing.getStartingValue() << std::endl;
-    std::cout << "Color: " << rollingThing.getColor() << std::endl;
-    std::cout << "Material: " << rollingThing.getMaterial() << "\n" << std::endl;
-
-    rollingThing.roll();
+    playGame(currentBank, currentBet);
 
     return 0;
 }
+
+
+void playGame(int currentBank, int currentBet) {
+    bool firstRoll = true;
+    int rollValue = 0;
+    Die die1, die2;
+    bool rollCompleted = false;
+    float localBank = currentBank;
+    std::string userInput;
+
+    while(userInput != "e") {
+        std::cout << "Roll (r), Bet(b), Quit(e): ";
+        std::getline(std::cin, userInput);
+
+        if(userInput == "r"){
+            //currentBank =
+            displayResults(currentBank, currentBet);
+            if(currentBank <= 0){
+                std::cout << "You don't have enough money.";
+            }
+        }
+    }
+
+
+    while (firstRoll != 0) {
+        rollValue = die1.roll() + die2.roll();
+        std::cout << "You rolled a " << rollValue << "\n";
+
+        if (firstRoll == 1) {
+            std::tie(rollCompleted, localBank), playFirstRoll(rollValue);
+            if (rollCompleted) {
+                firstRoll = 0;
+                rollCompleted = false;
+            } else {
+                playSecondRoll(rollValue);
+                rollCompleted = true;
+            }
+        }
+        // firstRoll = true;
+    }
+}
+
+
+void playFirstRoll(int rollValue){
+    std::cout << rollValue << "\n";
+}
+​
+void playSecondRoll(int rollValue){
+    std::cout << rollValue << "\n";
+}
+void displayResults(int currentBank, int currentBet){
+    std::cout << "Bank: " << currentBank << "\n";
+    std::cout << "Bet: " << currentBet << "\n";
+}
+
+

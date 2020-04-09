@@ -20,6 +20,7 @@ public:
     Die(int startingNumberOfSides, int startingIncrement, int startingStaringValue,
     std::string color, bool isSymbols , std::string startingMaterial);
     std::string stringRep();
+    Die();
     int roll();
     void setNumberOfSides (int newNumberOfSides);
     int getNumberOfSides();
