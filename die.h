@@ -7,6 +7,8 @@
 
 #include <string>
 
+const float payouts[] = {0.0, 0.0, 1.0, 1.0, 2.0, 1.5, 1.2, 1.0, 1.2, 1.5, 2.0, 1.0, 1.0};
+
 class Die{
 private:
     int numberOfSides;
@@ -14,11 +16,10 @@ private:
     int value;
     int startingValue;
     std::string color;
-    std::string material;
 
 public:
     Die(int startingNumberOfSides, int startingIncrement, int startingStaringValue,
-    std::string color, bool isSymbols , std::string startingMaterial);
+    std::string color);
     std::string stringRep();
     Die();
     int roll();
@@ -32,8 +33,6 @@ public:
     int getValue();
     void setColor (std::string newColor);
     std::string getColor();
-    void setMaterial(std::string newMaterial);
-    std::string getMaterial();
 };
 
 struct BadDieValueException : public std::exception{
